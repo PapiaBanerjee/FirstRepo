@@ -1,10 +1,10 @@
 Topic: Arduino UNO – Blinking of inbuilt LED
-Objective: In the menu of the Arduino IDE, we can choose: File ▸ Examples ▸ 01. Basics ▸ Blink. The IDE should use this code to blink the built-in LED automatically.
+Objective: In the menu of the Arduino IDE, we can choose: File ▸ Examples ▸ 01. Basics ▸ Blink. 
+The IDE should use this code to blink the built-in LED automatically.
 
 Hardware Required: Arduino UNO Board
-Circuit Diagram: This experiment uses the built-in LED that most Arduino boards have. This LED is connected to a digital pin and its number may vary from board type to board type. 
-We have a constant that is specified in every board descriptor file. This constant is LED_BUILTIN and allows you to control the built-in LED easily. 
-As this experiment has been done on inbuilt LED of Arduino, so no external circuit is required.
+Circuit Diagram: This experiment uses the Arduino boards built-in LED. This LED is linked to a digital pin. 
+The constant LED_BUILTIN allows control of the built-in LED. 
 
 
 	 
