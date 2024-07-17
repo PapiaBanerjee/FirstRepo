@@ -1,0 +1,72 @@
+Topic: Introduction to Raspberry Pi
+
+Objective:
+
+Raspberry Pi is the name of a series of single-board computers made by the Raspberry Pi Foundation, a UK charity that aims to educate people in computing and create easier access to computing education.
+The Raspberry Pi launched in 2012, and there have been several iterations and variations released since then. The original Pi had a single-core 700MHz CPU and just 256MB RAM, and the latest model has a 
+quad-core CPU clocking in at over 1.5GHz, and 4GB RAM. The price point for Raspberry Pi has always been under $100 (usually around $35 USD), most notably the Pi Zero, which costs just $5.
+All over the world, people use the Raspberry Pi to learn programming skills, build hardware projects, do home automation, implement Kubernetes clusters and Edge computing, and even use them in 
+industrial applications. The Raspberry Pi is a very cheap computer that runs Linux, but it also provides a set of GPIO (general purpose input/output) pins, allowing you to control electronic 
+components for physical computing and explore the Internet of Things (IoT).
+
+Hardware Required:
+There have been many generations of the Raspberry Pi line: from Pi 1 to 4, and even a Pi 400. There has generally been a Model A and a Model B of most generations. 
+Model A has been a less expensive variant, and tends to have reduced RAM and fewer ports (such as USB and Ethernet). The Pi Zero is a spinoff of the original (Pi 1) generation, made even smaller and cheaper. 
+Here's the lineup so far:
+•	Pi 1 Model B (2012)
+•	Pi 1 Model A (2013)
+•	Pi 1 Model B+ (2014)
+•	Pi 1 Model A+ (2014)
+•	Pi 2 Model B (2015)
+•	Pi Zero (2015)
+•	Pi 3 Model B (2016)
+•	Pi Zero W (2017)
+•	Pi 3 Model B+ (2018)
+•	Pi 3 Model A+ (2019)
+•	Pi 4 Model A (2019)
+•	Pi 4 Model B (2020)
+•	Pi 400 (2021)
+
+Circuit Diagram:Raspberry Pi.png
+
+GPIO Pinout
+One of the powerful features of the Raspberry Pi is the row of GPIO (general-purpose input output) pins and the GPIO Pinout is an interactive reference to these GPIO pins.
+
+
+Voltages
+From the above diagram, we can see that there are two 5V pins and two 3V3 pins on the board. It also has several ground pins (0V). All these pins are unconfigurable.
+
+Outputs
+A GPIO pin can be designated as an output pin. The pin set as output pin can be set to 3V3(high) or 0V(low).
+
+Inputs
+A GPIO pin can be designated as an input pin. The pin set as input pin can be read as 3V3(high) or 0V(low). You can use internal pull-up or pull-down resistors.
+You can see in the above diagram, GPIO2 and GPIO3 pins have fixed pull-up resistors but for the other pins, you can configure it in software.
+
+Alternative Functions
+
+GPIO pins can be used with a variety of alternative functions. Among them, some are available on all pins and others on specific pins.
+
+PWM: Pulse-width modulation
+Software PWM are available on all the pins whereas Hardware PWM are available on GPIO12, GPIO13, GPIO18, and GPIO19.
+
+SPI: Serial Peripheral Interface
+The SPI are available on the following –
+SPI0: MOSI (GPIO10); MISO (GPIO9); SCLK (GPIO11); CE0 (GPIO8), CE1 (GPIO7)
+SPI1: MOSI (GPIO20); MISO (GPIO19); SCLK (GPIO21); CE0 (GPIO18); CE1 (GPIO17); CE2 (GPIO16)
+
+I2C: Inter-integrated Circuit
+The I2C are available on the following –
+Data: (GPIO2); Clock (GPIO3)
+EEPROM Data: (GPIO0); EEPROM Clock (GPIO1)
+
+Serial
+The serial function is available at the following –
+TX(GPIO14)
+RX(GPIO15)
+
+Conclusion:
+The Raspberry Pi operates in the open-source ecosystem: it runs Linux (a variety of distributions), and its main supported operating system, Pi OS, is open source and runs a suite of open-source software.
+The Raspberry Pi Foundation contributes to the Linux kernel and various other open-source projects as well as releasing much of its own software as open source.
+
+
