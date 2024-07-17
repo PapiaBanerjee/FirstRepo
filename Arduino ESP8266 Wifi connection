@@ -1,0 +1,34 @@
+Topic: Interfacing ESP8266 Wi-Fi module with Arduino UNO
+
+Objective:
+
+For end-point IoT developments, ESP8266 wifi module, a low cost standalone wireless transceiver, is used. It provides embedded applications access to the internet using TCP/UDP communication protocol. 
+The microcontroller uses set of AT commands to communicate with the ESP8266 wifi module through UART with specified Baud rate (Default 115200).
+
+From Arduino IDE, click on the path: File -> Preference-> Additional Board Manager urls
+Add the following url:
+http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+Port connected to esp8266 needs to be selected.
+
+Go to "Tools -> Board -> Boards Manager", type "ESP8266" and install it.
+Go again to "Tools -> Board" and select "Generic ESP8266 Module".
+
+Hardware Required: Arduino Uno, Arduino IDE, ESP8266 Wi-Fi module, Wiring, Breadboard, USB cable
+
+Circuit Diagram: CD6a.png
+
+Connect these wires:
+•	TX on the ESP8266 connected to TX on the Arduino Uno.
+•	RX on the ESP8266 connected to RX on the Arduino Uno.
+•	EN on the ESP8266 connected to 3.3V on the Arduino Uno
+•	3v3 (or VCC) on the ESP8266 connected to 3.3V on the Arduino Uno.
+•	GND on the ESP8266 connected to GND on the Arduino Uno.
+
+With these wires connections, commands are passed from Arduino Uno Serial monitor present in  Arduino IDE to the ESP8266 via. 
+
+Code: Arduino to ESP8266 wifi module connection
+
+Conclusion:
+We are using the Arduino to communicate with the ESP8266, which means we’ll be making use of the transmitting and receiving pins to communicate with the Arduino Wi-Fi module.
+
