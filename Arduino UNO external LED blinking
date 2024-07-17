@@ -13,3 +13,21 @@ In CD1.png, UNO board has D13 as the LED_BUILTIN value.
 
 Code : Arduino External LED Blink.png
 
+After the circuit is built, the Arduino board is plugged to computer and the Arduino Software (IDE) is started. Enter the code as given.
+
+First initialize LED_BUILTIN pin as an output pin:
+pinMode(LED_BUILTIN, OUTPUT);
+In the main loop, the LED is turned on:
+digitalWrite(LED_BUILTIN, HIGH);
+Then the LED is turned off:
+digitalWrite(LED_BUILTIN, LOW);
+That sets the LED_BUILTIN pin to 0 volts, and the LED turns off. The delay() command sets the board to do nothing for 1000 milliseconds. This allows the switching on and off of the LED to be noticed properly.
+
+pinMode(13, OUTPUT) − The built-in function pinMode() tell Arduino Uno whether a pin is an INPUT or OUTPUT.
+digitalWrite(13, HIGH) − The pin set as OUTPUT can be HIGH (output 5 volts), or LOW (output 0 volts).
+
+Conclusion:
+We should see our LED turn on and off. 
+By varying the delay time of the code, we can control the blink of the external LED connected with the Arduino. 
+
+
