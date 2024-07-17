@@ -1,0 +1,30 @@
+Topic:  Arduino UNO – External pin setup – Fading of external LED on breadboard.
+
+Objective: Using an Arduino UNO board to see physical output: it fades the light of a glowing external LED.
+
+Hardware Required: 1 × Breadboard, 1 × Arduino Uno R3, 1 × LED, 1 × 330Ω Resistor, 2 × Jumper, 
+
+Circuit Diagram: CD2a, CD2b
+
+Led_Builtin pin  is connected to an external LED. Build the circuit as CD2a.png and CD2b.png to lit an external LED. 
+Connect digital pin of LED_BUILTIN constant to one end of the resistor. 
+Connect other end of the resistor to the long leg or positive leg or anode of the LED.
+Connect the short leg or negative leg or cathode of the LED to the GND. D13 is set as the LED_BUILTIN value. 
+The resistor in series with the LED may have values other than 220 ohms. The LED glows with up to 1K ohms.
+After the circuit is built, the Arduino board is plugged to computer and the Arduino Software (IDE) is started. 
+
+Code: Arduino Fading of external LED.png
+Code as given.
+First initialize LED_BUILTIN pin as an output pin:
+pinMode(LED_BUILTIN, OUTPUT);
+pinMode(13, OUTPUT) − The built-in “function” pinMode() tell Arduino Uno whether a pin is an INPUT or OUTPUT.
+AnalogWrite(13, brightness) −Set the brightness value of the OUTPUT pin using AnalogWrite() function.
+
+Conclusion:
+We should see our LED light fade its brightness from 255 to 0. 
+By varying the variable ‘fadeAmount’ in the code, we can control the fading of brightness of the external LED connected with the Arduino. 
+
+
+
+
+
