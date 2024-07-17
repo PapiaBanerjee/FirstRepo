@@ -1,0 +1,27 @@
+Topic: Gas sensor interfacing with Arduino Uno
+
+Objective:
+
+Gas sensor devices detect the level of concentration of atmospheric gases. This experiment contains interfacing of MQ2 sensor with Arduino.
+
+Hardware Required:	Arduino Uno, Connecting cable,	Breadboard,	MQ2 Gas sensor,	Dupont cables
+
+Circuit Diagram: CD4a.png, CD4b.png
+
+Connect the MQ2 sensor with the Arduino as shown in the above diagram.
+1.	Connect the VCC pin of the sensor to the 5V of the Arduino.
+2.	Connect the GND of the sensor to the GND of the Arduino.
+3.	Connect the digital pin of the sensor D0 to the digital pin number 8 of the Arduino
+4.	Connect the analog pin of the sensor to the analog pin A0 of the Arduino.
+
+Code:Arduino gas sensor interface.png
+
+Conclusion:
+
+Gas leakage detection in home and industries is done using the MQ2 module of gas sensor. It monitors the level of atmospheric gases operating on 5V and 800mW. 
+The sensor senses the potential difference based on the level of specific gas concentration and changes the resistance value. The type of gas is identified by the output voltage of gas sensor.
+Comparator sensors work in analog mode to set up a threshold value for gas concentration level. The digital pin will show HIGH only when the concentration of the gas reaches the threshold value. Power to the sensor comparator board is provided by VCC and is connected to the 5V of the Arduino. GND of sensor comparator board is connected to the GND pin of the Arduino.
+D0 is the digital output pin, which displays digital value of the detected gas. A0 is the analog output pin, values of which is used in detecting the gas type.
+
+
+
