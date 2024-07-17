@@ -1,0 +1,15 @@
+Topic:  Arduino UNO – External pin setup – Blinking of external LED on breadboard.
+
+Objective: Using an Arduino UNO board to make an external LED blink.
+
+Hardware Required: We will need the following components − 1 × Breadboard, 1 × Arduino Uno R3, 1 × LED, 1 × 330Ω Resistor, 2 × Jumper
+
+Circuit Diagram: CD1.png, CD1a.png
+
+This experiment uses the Arduino boards built-in LED. The Led_Builtin pin is connected to an external LED.
+To lit an external LED using circuit CD1.png, one end of the resistor is connected to the digital pin of LED_BUILTIN constant. 
+The long leg or the positive leg or anode of the LED is connected to the other end of the resistor and the short leg or the negative leg or cathode of the LED is connected to the GND. 
+In CD1.png, UNO board has D13 as the LED_BUILTIN value.
+
+Code : Arduino External LED Blink.png
+
