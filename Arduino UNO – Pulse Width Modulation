@@ -1,0 +1,41 @@
+Topic: Arduino UNO – Pulse Width Modulation
+
+Objective:
+
+Pulse Width Modulation is used to vary the pulse-train width. Applications of PWM are speed controllers, limiting power of motors and LEDs. It is a square wave with a varying high and low time. 
+Terms associated with PWM are:
+•	On-Time − time duration when signal is HIGH.
+•	Off-Time − time duration when signal is LOW.
+•	Period − sum of On-Time and Off-Time of signal.
+•	Duty Cycle − the percentage of time duration of the signal when the signal remains ON.
+
+In PWM, the width of pulses of a waveform can be controlled. The time for which a pulse is in the HIGH or in the LOW state can be controlled. 
+An analog square waveform is created by repeated switching of a signal to ON and OFF. Switching of signal generates full VCC voltage at the ON position and 0 volt at the OFF position. 
+
+Arduino PWM Pins
+There are 6 PWM pins available on the Arduino UNO board and the Pins number are 3, 5, 6, 9, 10, 11. The number of PWM pins vary from one Arduino board to another Arduino Board. 
+The following table shows the PWM pins for Arduino Uno. It also lists the default PWM frequency of each pin.
+Board	        Pins	              Freqeuncy
+Arduino_Uno	  3, 5, 6, 9, 10, 11	490 Hz (pins 5 and 6: 980 Hz)
+Arduino_Nano	3, 5, 6, 9, 10, 11	490 Hz (pins 5 and 6: 980 Hz)
+Arduino_Mini	3, 5, 6, 9, 10, 11	490 Hz (pins 5 and 6: 980 Hz)
+Arduino Mega	2 to 13, 44 to 46	  490 Hz (pins 3 and 11: 980 Hz)
+
+Arduino AnalogWrite() PWM Function
+
+The analogWrite() function generates a PWM signal with the default frequency of each pin as mentioned in the table. A PWM square waveform of fixed frequency 
+can be produced using the analogWrite() command at each of the pins. The analogWrite() accepts a pin number to get the PWM signal and a duty cycle that vary between 0 to 255.
+By default, the waveform of 980Hz frequency is generated at Pin 5 and Pin 6  and of 490Hz at pin9, pin10, pin11, and pin3.
+
+Hardware Required: 1 × Breadboard, 1 × Arduino Uno R3, 1 × LED, 1 × 330Ω Resistor, 2 × Jumper
+
+Circuit Diagram: CD5a.png, CD5b.png
+
+Code: Arduino PWM 1.png. Arduino PWM 2.png
+
+The following code generates a fixed frequency of 490Hz and fixed 50% duty cycle waveform on the digital pin 11 of Arduino Uno. 
+
+Conclusion:
+
+The PWM function width parameter read from value 0 to 255, Value 0 will represent completely OFF waveform and 255 represent completely ON Waveform. 
+Hence, the value 127 will give ((127/255) * 100) = 50% duty cycle and a number 64 will give ((64/255) * 100) = 25% duty cycle waveform.
