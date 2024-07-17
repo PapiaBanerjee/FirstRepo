@@ -1,0 +1,38 @@
+Topic: Arduino UNO - LED on/off using button switch on breadboard (DigitalReadSerial)
+
+Objective:This experiment monitors the state of a switch by a serial communication between Arduino and computer using USB port.
+
+Hardware Required: Arduino Board, A momentary switch, button, or toggle switch, 10k ohm resistor, hook-up wires, breadboard
+
+Circuit Diagram: CD3a.png, CD3b.png
+
+Connect a red and a black wire to the Arduino board. They are connected to the two long vertical rows at the side of the breadboard to the 5 volt supply and the ground. 
+The third wire is connected from digital pin 2 to one leg of the pushbutton which is in turn connected to ground through a pull-down resistor of 10k ohm.
+The other leg of the pushbutton is connected to the 5 volt supply. Pushbuttons are switches which when pressed forms a closed circuit. 
+The pin 2 is connected to ground through a pull-down resistor when the pushbutton is unpressed and the pin 2 is set to LOW, or 0. 
+The pin 2 connects to 5 volts when the pushbutton is pressed and the pin 2 is set to HIGH, or 1.
+Why a pull-down resistor in the circuit is needed? If the digital i/o pin is disconnected then its reading may change abruptly and randomly 
+return values of either HIGH or LOW because the input is "floating" and doesn't have a solid connection to a voltage or ground.
+
+Code: Arduino DigitalReadSerial.png
+
+The setup function starts serial communications, at 9600 bits per second, between Arduino board and computer :
+Serial.begin(9600);
+Initialize digital pin 13 as an input:
+pinMode(13,INPUT);
+In the main() function of the code, 5 volts flows through the circuit when button is pressed and the input pin 13 will be connected to ground when button is unpressed. 
+As a digital input the switch can only have an ON state or  Arduino returned  "1", or HIGH state or an OFF state or Arduino returned "0", or LOW state.
+In the main() function, a variable should store the information coming in from the pushbutton or switch which is either a "1" or a "0". 
+An int data type variable ‘buttonState’ sets to values read by digital pin 13. 
+int buttonState = digitalRead(13);
+Print this information back to the computer as a decimal value using the command Serial.println():
+Serial.println(buttonState);
+The Serial Monitor in the Arduino Software (IDE) shows a stream of "0"s for switch open, or "1"s for closed switch.
+Conclusion:
+1.	Connect the Arduino board to computer with an USB cable.
+2.	The Verify button in the top left corner of the IDE  when clicked will turn orange and then back to blue when it has completed compiling.
+4.	The Upload Button (located to the immediate right of the Verify button) when clicked will also turn orange and then back to blue once the sketch is uploaded to the Arduino board.
+5.	From the menu bar at the top select Tools > Serial Monitor. 
+6.	The serial monitor window will open and will be spouting off numbers. It should be a bunch of 0s.
+7.	On pressing and holding the pushbutton – the serial monitor window will show the numbers as 1s.
+8.	If the numbers are not scrolling, we need to make sure that we click Autoscroll at the bottom left of the serial monitor window.
